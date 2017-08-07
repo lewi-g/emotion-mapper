@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
   // myQuotes: [{type: mongoose.Schema.Types.ObjectId, ref: 'Quote'}]
 });
 
-const userEntrySchema = new mongoose.Schema({
+const userEntriesSchema = new mongoose.Schema({
   userName: {type: String, required: true},
   // password: {type: String, required: true},
   emotion: {type: String, 
@@ -23,5 +23,5 @@ const userEntrySchema = new mongoose.Schema({
 
 });
 
-const UserEntry = mongoose.model('UserEntry', userEntrySchema);
-module.exports.UserEntry = UserEntry;
+const UserEntries = mongoose.model('UserEntry', userEntriesSchema);
+module.exports.UserEntries = UserEntries;
