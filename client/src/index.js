@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {Provider} from 'react-redux'
+
+import App from './App'
 import './index.css';
-import UserLogin from './components/user-login'
+import store from './store'
+import FirstEmotion from './components/first-emotion'
 
 ReactDOM.render(
-  <UserLogin />,
+  <Provider store={store}>
+    <FirstEmotion />
+  </Provider>,
   document.getElementById('root')
 );

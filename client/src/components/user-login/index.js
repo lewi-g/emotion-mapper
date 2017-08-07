@@ -22,7 +22,7 @@ export default class UserLogin extends React.Component {
             <input type="text" name="password" id="password"
               className="password-input" required
               ref={passwordInput => this.input = passwordInput} />
-               <button type="submit" id="user-submit-button" className="button" name="submit">Cheese</button>
+               <button type="submit" id="user-submit-button" className="button" name="submit">Submit</button>
           </fieldset>
         </form>
       </div>
