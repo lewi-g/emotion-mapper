@@ -21,6 +21,7 @@
   "author": "Joe Turner <jturner@thinkful.com>",
   "license": "MIT",
   "dependencies": {
+    "babel-preset-react-app": "^3.0.1",
     "cross-env": "^3.1.4",
     "express": "^4.14.1",
     "http-proxy-middleware": "^0.17.3",
@@ -28,6 +29,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
+    "react-script": "^2.0.5",
     "react-scripts": "^1.0.10",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",

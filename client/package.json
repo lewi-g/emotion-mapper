@@ -2,12 +2,11 @@
   "name": "thinkful-full-stack-template-client",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "react-scripts": "0.9.5"
-  },
+  "devDependencies": {},
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-scripts": "^1.0.10"
   },
   "scripts": {
     "start": "react-scripts start",
