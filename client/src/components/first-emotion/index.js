@@ -1,6 +1,7 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-export default class FirstEmotion extends React.Component {
+class FirstEmotion extends React.Component {
   render() {
     return (
       <div className="first-emotion">
@@ -17,3 +18,5 @@ export default class FirstEmotion extends React.Component {
     )
   }
 }
+
+export default connect()(FirstEmotion)

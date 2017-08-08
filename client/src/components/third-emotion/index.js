@@ -1,9 +1,12 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-export default class SecondEmotion extends React.Component {
+class SecondEmotion extends React.Component {
   render () {
     return (
       <p>third page stuff!</p>
     )
   }
 }
+
+export default connect()(SecondEmotion)

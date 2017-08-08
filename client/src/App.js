@@ -1,5 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 import EmotionParent from './components/emotion-parent'
 import UserHistory from './components/user-history'
@@ -26,4 +27,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect()(App)

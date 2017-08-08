@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 class UserHistory extends React.Component {
   render () {
@@ -8,4 +9,4 @@ class UserHistory extends React.Component {
   }
 }
 
-export default UserHistory
+export default connect()(UserHistory)
