@@ -5,11 +5,11 @@ import {Provider} from 'react-redux'
 import App from './App'
 import './index.css';
 import store from './store'
-import FirstEmotion from './components/first-emotion'
+import FirstEmotion from './components/user-login'
 
 ReactDOM.render(
   <Provider store={store}>
-    <FirstEmotion />
+      <App />
   </Provider>,
   document.getElementById('root')
 );
