@@ -1,11 +1,10 @@
 import React from 'react'
-import './styles.css'
+import {connect} from 'react-redux'
 
-export default class FirstEmotion extends React.Component {
+class FirstEmotion extends React.Component {
   render() {
     return (
       <div className="first-emotion">
-        <h1>How are you feeling?</h1>
         <ul>
           <li>Happy</li>
           <li>Sad</li>
@@ -19,3 +18,5 @@ export default class FirstEmotion extends React.Component {
     )
   }
 }
+
+export default connect()(FirstEmotion)

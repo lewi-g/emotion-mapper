@@ -10,4 +10,4 @@ exports.TEST_DATABASE_URL = (
   'mongodb://localhost/test-emotions');
 exports.PORT = process.env.PORT || 8080;
 
-console.log(exports.DATABASE_URL);
+console.log('mlab', exports.DATABASE_URL);

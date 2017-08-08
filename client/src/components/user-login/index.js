@@ -1,6 +1,7 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-export default class UserLogin extends React.Component {
+class UserLogin extends React.Component {
 
   submitUser(event) {
     event.preventDefault()
@@ -30,6 +31,4 @@ export default class UserLogin extends React.Component {
   }
 }
 
-
-// how to grab inputs?
-// connections
+export default connect()(UserLogin)
