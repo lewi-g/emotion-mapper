@@ -1,4 +1,4 @@
-export const GO_DEEPER1 = 'GO_DEEPER1';
+export const GO_DEEPER = 'GO_DEEPER';
 export const goDeeper = emoSelection1=> ({
   type: GO_DEEPER,
   emoSelection1
