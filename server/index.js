@@ -14,7 +14,13 @@ const { UserEntries } = require('./models');
 
 const { DATABASE_URL, PORT } = require('./config');
 
+app.use(morgan('common'));
+app.use(bodyParser.json());
+app.use(express.static('public'));
+
 // API endpoints go here!
+// app.use(jsonParser());
+
 app.post('/', (req, res) => {
   console.log('req.body is....');
   console.log(req.body);
@@ -41,11 +47,11 @@ app.post('/', (req, res) => {
 
   UserEntries
     .create({
-      quote: req.body.userName,
+      userName: req.body.userName,
       emotion: req.body.emotion,
       timeOfEvent: req.body.timeOfEvent,
     })
-    .then(quote => res.status(201).json(quote.apiRepr()))
+    .then(userEnt => res.status(201).json(userEnt))
     .catch(err => {
       console.error(err);
       res.status(500).json({ error: 'Something went wrong' });
