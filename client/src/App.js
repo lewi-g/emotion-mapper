@@ -1,7 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import UserLogin from './components/user-login'
-import FirstEmotion from './components/first-emotion'
+
+import EmotionParent from './components/emotion-parent'
+import UserHistory from './components/user-history'
+{/*import UserLogin from './components/user-login'*/}
+
 
 class App extends React.Component {
   render() {
@@ -9,12 +12,13 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <header>
-            <h1><Link to="/">Man-Up!</Link></h1>
+            <h1>Man Up!</h1>
             <h2><Link to="/">See My History</Link></h2>
           </header>
             <main>
-              <Route exact path="/login" component={UserLogin} />
-              <Route exact path="/first-page" component={FirstEmotion} />
+              {/*<Route exact path="/login" component={UserLogin} />*/}
+              <Route path="/emotions" component={EmotionParent} />
+              <Route exact path="/user-history" component={UserHistory} />
             </main>
         </div>
       </Router>
