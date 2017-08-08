@@ -5,7 +5,7 @@ const initialState = {
    emoTier1: 'bad',
    emoTier2: 'disgusted',
    emoTier3: '',
-   emoOptions: []
+   emoChoices: []
    //userComment: ''
 }
 
@@ -23,20 +23,20 @@ export const emoReducer = (state = initialState, action) => {
     case 'GO_Deeper':
       return {
       ...state,
-      emoTier1: action.emotionSelection,
-      emoOptions: emoTier2Choices
+      emoTier1: action.emoSelection1,
+      emoChoices: emoTier2Choices
       }
     case 'GO_Deeper2':
       return {
       ...state,
-      emoTier2: action.emotionSelection,
-      emoOptions: emoTier3Choices
+      emoTier2: action.emoSelection2,
+      emoChoices: emoTier3Choices
         // display the next level of emotion components
       }
     case 'SELECT_FINAL':
       return {
       ...state,
-      emoTier2: action.emotionSelection
+      emoTier3: action.finalEmotion
         // display the next level of emotion components
       }
     case 'SUBMIT_ENTRY': {
