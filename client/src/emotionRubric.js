@@ -1,4 +1,4 @@
-export const EmotionRubric = {
+export const emotionRubric = {
   bad: {
     bored: ["indifferent", "apathetic"],
     busy: ["pressured", "apathetic"],

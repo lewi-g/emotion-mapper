@@ -1,22 +1,30 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
+import {goDeeper} from '../../actions'
+
 class FirstEmotion extends React.Component {
+
+  processEmotion(emotion){
+    this.props.dispatch(goDeeper(emotion))
+  }
+
   render() {
     return (
       <div className="first-emotion">
-        <ul>
-          <li>Happy</li>
-          <li>Sad</li>
-          <li>Surpised</li>
-          <li>Bad</li>
-          <li>Disgusted</li>
-          <li>Fearful</li>
-          <li>Angry</li>
-        </ul>
+        <form onSubmit={e => e.preventDefault()}>
+          <fieldset>
+            {this.props.emoChoices.map((emotion, index) =>
+              <button onClick={e => this.processEmotion(emotion)} type="submit" key={index}>{emotion}</button>
+            )}
+          </fieldset>
+        </form>
       </div>
     )
   }
 }
 
-export default connect()(FirstEmotion)
+const mapStateToProps = (state) => ({
+  emoChoices: state.emoReducer.emoChoices
+})
+export default connect(mapStateToProps)(FirstEmotion)

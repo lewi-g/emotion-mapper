@@ -6,7 +6,7 @@ export const goDeeper = emoSelection1=> ({
 
 export const GO_DEEPER2 = 'GO_DEEPER2';
 export const goDeeper2 = emoSelection2=> ({
-  type: GO_DEEPER,
+  type: GO_DEEPER2,
   emoSelection2
 })
 
