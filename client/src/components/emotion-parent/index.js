@@ -13,7 +13,7 @@ class EmotionParent extends React.Component {
     return (
       <div className="emotion-parent">
         <h1>How are you feeling?</h1>
-        <Route exact path="/emotions/:emotion" component={FirstEmotion} />
+        <Route exact path="/emotions/" component={FirstEmotion} />
         <Route exact path="/emotions/:emotion" component={SecondEmotion} />
         <Route exact path="/emotions/second-page" component={SecondEmotion} />
         <Route exact path="/emotions/third-page" component={ThirdEmotion} />

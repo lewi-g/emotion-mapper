@@ -1,5 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {BrowserRouter as Link} from 'react-router-dom'
+
+import {selectFinal} from '../../actions'
 
 class ThirdEmotion extends React.Component {
   componentDidMount() {

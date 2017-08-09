@@ -19,11 +19,11 @@ const initialState = {
 export const emoReducer = (state = initialState, action) => {
   // let emoTier2Choices = Object.keys(emotionRubric[state.emoTier1])
   // let emoTier3Choices = emotionRubric[state.emoTier1][state.emoTier2]
-
+  console.log('hello', emotionRubric[state.emoTier1])
   switch (action.type) {
     case 'GO_DEEPER':
        let emoTier1= action.emoSelection1
-       let emoTier2Choices = Object.keys(emotionRubric[emoTier1])
+       let emoTier2Choices = Object.keys(emotionRubric[state.emoTier1])
       return {
       ...state,
       emoTier1: action.emoSelection1,

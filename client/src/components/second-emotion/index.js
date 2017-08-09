@@ -1,5 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {BrowserRouter as Link} from 'react-router-dom'
+
+
+import {goDeeper2} from '../../actions'
 
 class SecondEmotion extends React.Component {
   componentDidMount() {
