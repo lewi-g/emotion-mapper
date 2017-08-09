@@ -1,7 +1,7 @@
 export const GO_DEEPER = 'GO_DEEPER';
-export const goDeeper = emoSelection1=> ({
+export const goDeeper = emoSelection => ({
   type: GO_DEEPER,
-  emoSelection1
+  emoSelection
 })
 
 export const GO_DEEPER2 = 'GO_DEEPER2';

@@ -2,9 +2,7 @@ import { GO_DEEPER1, G0_DEEPER2, FINAL_SELECTION, SUBMIT_ENTRY } from '../action
 import { emotionRubric } from '../emotionRubric.js';
 
 const initialState = {
-   emoTier1: 'happy',
-   emoTier2: 'accepted',
-   emoTier3: '',
+   emoTiers: [],
    emoChoices: Object.keys(emotionRubric)
    //userComment: ''
 }
@@ -15,27 +13,31 @@ const initialState = {
 // find state.emotier2 in emoRubric
 // and take the array and push to components
 
+const optionsFromTiers = (emotionRubric, emoTiers) => {
+  let currentLevel = emotionRubric;
+  let currentChoices;
+  emoTiers.forEach(key => {
+    currentLevel = currentLevel[key];
+      console.log('CURRENT LEVEL', currentLevel)
+  });
+  if (currentLevel === true) {
+    return null;
+  } else {
+    currentChoices = Object.keys(currentLevel);
+    return currentChoices
+  }
+  console.log('first one', currentChoices)
+};
 
 export const emoReducer = (state = initialState, action) => {
-  // let emoTier2Choices = Object.keys(emotionRubric[state.emoTier1])
-  // let emoTier3Choices = emotionRubric[state.emoTier1][state.emoTier2]
-  console.log('hello', emotionRubric[state.emoTier1])
+
   switch (action.type) {
     case 'GO_DEEPER':
-       let emoTier1= action.emoSelection1
-       let emoTier2Choices = Object.keys(emotionRubric[state.emoTier1])
+      let currentEmoTiers = [...state.emoTiers, action.emoSelection]
       return {
       ...state,
-      emoTier1: action.emoSelection1,
-      emoChoices: emoTier2Choices
-      }
-    case 'GO_DEEPER2':
-      let emoTier2 = action.selection2
-      let emoTier3Choices= emotionRubric[state.emoTier1][emoTier2]
-      return {
-      ...state,
-      emoTier2: action.emoSelection2,
-      emoChoices: emoTier3Choices
+      emoTiers: currentEmoTiers,
+      emoChoices: optionsFromTiers(emotionRubric, currentEmoTiers)
       }
     case 'SELECT_FINAL':
       return {

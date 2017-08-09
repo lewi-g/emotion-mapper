@@ -15,7 +15,7 @@ class FirstEmotion extends React.Component {
   render() {
     return (
       <div className="first-emotion">
-      <Link to="/emotions/cheese"><p>Link</p></Link>
+
         <form onSubmit={e => e.preventDefault()}>
           <fieldset>
             {this.props.emoChoices.map((emotion, index) =>
