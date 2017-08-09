@@ -16,11 +16,9 @@ const userSchema = new mongoose.Schema({
 const userEntriesSchema = new mongoose.Schema({
   userName: {type: String, required: true},
   // password: {type: String, required: true},
-  emotion: {type: String, 
-    required: true},
+  emotion: {type: String, required: true},
   event: {type: String},
   timeOfEvent: {type: Date, default: Date.now }
-
 });
 
 const UserEntries = mongoose.model('UserEntry', userEntriesSchema);
