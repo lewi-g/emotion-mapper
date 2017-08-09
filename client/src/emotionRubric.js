@@ -1,56 +1,56 @@
 export const emotionRubric = {
   bad: {
-    bored: ["indifferent", "apathetic"],
-    busy: ["pressured", "apathetic"],
-    stressed: ["overwhelmed", "out of control"],
-    tired: ["sleepy", "unfocussed"]
+    bored: { indifferent: true, apathetic: true },
+    busy: { pressured: true, apathetic: true },
+    stressed: { overwhelmed: true, "out of control": true },
+    tired: { sleepy: true, unfocussed: true }
   },
   fearful: {
-    scared: ["helpless", "frightened"],
-    anxious: ["overwhelmed", "worried"],
-    insecure: ["inadequate", "inferior"],
-    weak: ["insignificant", "worthless"],
-    rejected: ["excluded", "persecuted"],
-    threatened: ["nervous", "exposed"]
+    scared: { helpless: true, frightened: true },
+    anxious: { overwhelmed: true, worried: true },
+    insecure: { inadequate: true, inferior: true },
+    weak: { insignificant: true, worthless: true },
+    rejected: { excluded: true, persecuted: true },
+    threatened: { nervous: true, exposed: true }
   },
   angry: {
-    "let down": ["betrayed", "resentful"],
-    humiliated: ["disrespected", "ridiculous"],
-    bitter: ["indignant", "violated"],
-    mad: ["furious", "jealous"],
-    aggressive: ["provoked", "hostile"],
-    frustrated: ["infuriurated", "annoyed"],
-    distant: ["withdrawn", "numb"],
-    critical: ["sceptical", "dismissive"]
+    "let down": { betrayed: true, resentful: true },
+    humiliated: { disrespected: true, ridiculous: true },
+    bitter: { indignant: true, violated: true },
+    mad: { furious: true, jealous: true },
+    aggressive: { provoked: true, hostile: true },
+    frustrated: { infuriurated: true, annoyed: true },
+    distant: { withdrawn: true, numb: true },
+    critical: { sceptical: true, dismissive: true }
   },
   disgusted: {
-    dissaproving: ["judgemental", "embarassed"],
-    disapointed: ["appalled", "revolted"],
-    awful: ["nauseated", "detestable"],
-    repelled: ["horrified", "hesitant"]
+    dissaproving: { judgemental: true, embarassed: true },
+    disapointed: { appalled: true, revolted: true },
+    awful: { nauseated: true, detestable: true },
+    repelled: { horrified: true, hesitant: true }
   },
   sad: {
-    hurt: ["embarassed", "diappointed"],
-    guilty: ["ashamed", "remorseful"],
-    despair: ["grief", "powerless"],
-    vulnerable: ["victimized", "fragile"],
-    lonely: ["isolated", "abandoned"]
+    hurt: { embarassed: true, diappointed: true },
+    guilty: { ashamed: true, remorseful: true },
+    despair: { grief: true, powerless: true },
+    vulnerable: { victimized: true, fragile: true },
+    lonely: { isolated: true, abandoned: true }
   },
   happy: {
-    playful: ["aroused", "cheeky"],
-    content: ["free", "joyful"],
-    interested: ["curious", "inquisitive"],
-    proud: ["successful", "confident"],
-    accepted: ["respected", "valued"],
-    powerful: ["courageous", "creative"],
-    peaceful: ["loving", "thankful"],
-    trusting: ["sensitive", "intimate"],
-    optimistic: ["hopful", "inspired"]
+    playful: { aroused: true, cheeky: true },
+    content: { free: true, joyful: true },
+    interested: { curious: true, inquisitive: true },
+    proud: { successful: true, confident: true },
+    accepted: { respected: true, valued: true },
+    powerful: { courageous: true, creative: true },
+    peaceful: { loving: true, thankful: true },
+    trusting: { sensitive: true, intimate: true },
+    optimistic: { hopful: true, inspired: true }
   },
   surprised: {
-    startled: ["shocked", "dismayed"],
-    confused: ["disillusioned", "perplexed"],
-    amazed: ["astonished", "awe"],
-    excited: ["eager", "energetic"]
+    startled: { shocked: true, dismayed: true },
+    confused: { disillusioned: true, perplexed: true },
+    amazed: { astonished: true, awe: true },
+    excited: { eager: true, energetic: true }
   }
 };
