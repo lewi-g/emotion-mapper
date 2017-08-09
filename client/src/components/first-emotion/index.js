@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {BrowserRouter as Link} from 'react-router-dom'
 
 import {goDeeper} from '../../actions'
+import {postUserEntry} from '../../actions/postEntry'
 
 class FirstEmotion extends React.Component {
   componentDidMount() {
@@ -11,13 +12,25 @@ class FirstEmotion extends React.Component {
   processEmotion(emotion){
     this.props.dispatch(goDeeper(emotion))
   }
+  submitEntry(e){
+    e.preventDefault();
+    const inputBody = this.input;
+    this.props.dispatch(postUserEntry(inputBody));
+  }
 
   render() {
     if (this.props.emoChoices === null) {
         return (
           <div>
             <p>{this.props.emoTiers[2]}</p>
-            <button type="submit">BUTTON</button>
+            <form onSubmit={e => this.submitEntry(e)}>
+              <fieldset>
+                <input type="text" name="userEntry" id="userEntry"
+                  className="text" placeholder="Add your Entry" required
+                  ref={input => this.input = input} />
+                   <button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button>
+              </fieldset>
+            </form>
           </div>
         )
       } else {

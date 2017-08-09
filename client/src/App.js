@@ -14,7 +14,7 @@ class App extends React.Component {
         <div className="App">
           <header>
             <h1>Man Up!</h1>
-            <h2><Link to="/">See My History</Link></h2>
+            <h2><Link to="/user-history">See My History</Link></h2>
           </header>
             <main>
               {/*<Route exact path="/login" component={UserLogin} />*/}

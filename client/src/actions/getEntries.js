@@ -10,24 +10,23 @@ export const fetchUserEntriesRequest = () => ({
 })
 
 export const FETCH_USER_ENTRIES_ERROR = 'FETCH_USER_ENTRIES_ERROR';
-export const fetchUserEntriesError = error => ({
+export const fetchUserEntriesError = message => ({
   type: FETCH_USER_ENTRIES_ERROR,
-  error
+  message
 })
 
 export const fetchUserEntries = () => dispatch =>{
   console.log('UserEntries being fetched');
     dispatch(fetchUserEntriesRequest());
-  fetch('/api/userEntries')
+  fetch('/api/userEntries', {
+    method: 'GET'
+  })
   .then(res => {
     if (!res.ok) {
       return Promise.reject(res.statusText)
     }
     return res.json();
   })
-  .then(userEntries => {
-    dispatch(fetchUserEntriesSuccess(userEntries));
-  }).catch(err => {
-    dispatch(fetchUserEntriesError(err))
-  })
+  .then(userEntries => dispatch(fetchUserEntriesSuccess(userEntries)))
+  .catch(error => dispatch(fetchUserEntriesError(error.message)))
 };

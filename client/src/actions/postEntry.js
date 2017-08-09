@@ -12,14 +12,16 @@ const postUserEntrySuccess= (userEntry) => ({
 export const POST_USER_ENTRY_ERROR = 'POST_USER_ENTRY_ERROR';
 const postUserEntryError = (message) => ({
   type: POST_USER_ENTRY_ERROR,
+  message
 });
 
 export const postUserEntry = (inputBody) => {
+  const url = 'http://localhost:8080/api/userEntries'
   return (dispatch) => {
     dispatch(postUserEntryRequest())
-    fetch('/api/userentries', {
+    fetch(url, {
       method: 'POST',
-      body: JSON.stringify({test: inputBody.value}),
+      body: JSON.stringify({postEntry: inputBody.value}),
       headers: {
         Accept: 'application/json',
         'Content-type': 'application/json'

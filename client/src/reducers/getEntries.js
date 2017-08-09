@@ -2,7 +2,7 @@ import {
   FETCH_USER_ENTRIES_SUCCESS,
   FETCH_USER_ENTRIES_REQUEST,
   FETCH_USER_ENTRIES_ERROR
-} from "../actions/cheese";
+} from "../actions/getEntries";
 
 const initialState = {
   userEntries: [],

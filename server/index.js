@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const cors = require('cors');
 
 
 const app = express();
@@ -17,11 +18,23 @@ const { DATABASE_URL, PORT } = require('./config');
 app.use(morgan('common'));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use(cors())
 
 // API endpoints go here!
 
+app.get('/api/userEntries', (req, res) => {
+  console.log(req.body)
+  UserEntries
+    .find()
+    .then(entries => res.json(entries))
+    .catch(err => {
+        console.error(err);
+        res.status(500).json({message: 'Internal server error'});
+      });
 
-app.post('/userentries', (req, res) => {
+})
+
+app.post('/api/userEntries', (req, res) => {
   console.log('req.body is....');
   console.log(req.body);
   // const userSuppliedTag = req.body.tag;
