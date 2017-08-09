@@ -21,3 +21,10 @@ export const submitEntry = userEntry => ({
   type: SUBMIT_ENTRY,
   userEntry
 })
+
+export const asyncGoDeeper = (emotion) => {
+  return (dispatch) => {
+    dispatch(goDeeper(emotion))
+
+  }
+}

@@ -2,8 +2,8 @@ import { GO_DEEPER1, G0_DEEPER2, FINAL_SELECTION, SUBMIT_ENTRY } from '../action
 import { emotionRubric } from '../emotionRubric.js';
 
 const initialState = {
-   emoTier1: 'bad',
-   emoTier2: '',
+   emoTier1: 'happy',
+   emoTier2: 'accepted',
    emoTier3: '',
    emoChoices: ['bad', 'sad', 'happy', 'fearful','angry', 'disgusted', 'surprised']
    //userComment: ''
@@ -17,12 +17,8 @@ const initialState = {
 
 
 export const emoReducer = (state = initialState, action) => {
-  let emoTier1= 'angry'
-
-  let emoTier1Choices= Object.keys(emotionRubric)
   let emoTier2Choices = Object.keys(emotionRubric[state.emoTier1])
-  console.log('hello there', emoTier2Choices)
-
+  let emoTier3Choices = emotionRubric[state.emoTier1][state.emoTier2]
 
   switch (action.type) {
     case 'GO_DEEPER':

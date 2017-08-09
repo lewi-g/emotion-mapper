@@ -1,10 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {BrowserRouter as Link} from 'react-router-dom'
 
 import {goDeeper} from '../../actions'
 
 class FirstEmotion extends React.Component {
-
+  componentDidMount() {
+    console.log(this.props.match.params)
+  }
   processEmotion(emotion){
     this.props.dispatch(goDeeper(emotion))
   }
@@ -12,6 +15,7 @@ class FirstEmotion extends React.Component {
   render() {
     return (
       <div className="first-emotion">
+      <Link to="/emotions/cheese"><p>Link</p></Link>
         <form onSubmit={e => e.preventDefault()}>
           <fieldset>
             {this.props.emoChoices.map((emotion, index) =>
