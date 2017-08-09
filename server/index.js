@@ -19,9 +19,9 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // API endpoints go here!
-// app.use(jsonParser());
 
-app.post('/', (req, res) => {
+
+app.post('/userentries', (req, res) => {
   console.log('req.body is....');
   console.log(req.body);
   // const userSuppliedTag = req.body.tag;
