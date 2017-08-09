@@ -13,22 +13,31 @@ class FirstEmotion extends React.Component {
   }
 
   render() {
-    return (
-      <div className="first-emotion">
+    if (this.props.emoChoices === null) {
+        return (
+          <div>
+            <p>{this.props.emoTiers[2]}</p>
+            <button type="submit">BUTTON</button>
+          </div>
+        )
+      } else {
+        return (
+          <div className="first-emotion">
 
-        <form onSubmit={e => e.preventDefault()}>
-          <fieldset>
-            {this.props.emoChoices.map((emotion, index) =>
-              <button onClick={e => this.processEmotion(emotion)} type="submit" key={index}>{emotion}</button>
-            )}
-          </fieldset>
-        </form>
-      </div>
-    )
+            <form onSubmit={e => e.preventDefault()}>
+              <fieldset>
+                {this.props.emoChoices.map((emotion, index) =>
+                  <button onClick={e => this.processEmotion(emotion)} type="submit" key={index}>{emotion}</button>
+                )}
+              </fieldset>
+            </form>
+          </div>
+        )
+      }
   }
 }
-
 const mapStateToProps = (state) => ({
-  emoChoices: state.emoReducer.emoChoices
-})
+    emoTiers: state.emoReducer.emoTiers,
+    emoChoices: state.emoReducer.emoChoices
+});
 export default connect(mapStateToProps)(FirstEmotion)

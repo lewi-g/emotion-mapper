@@ -17,18 +17,16 @@ const postUserEntryError = (message) => ({
 export const postUserEntry = (inputBody) => {
   return (dispatch) => {
     dispatch(postUserEntryRequest())
-    setTimeout(() => {
-      fetch('/api/userentries', {
-        method: 'POST',
-        body: JSON.stringify({test: inputBody.value}),
-        headers: {
-          Accept: 'application/json',
-          'Content-type': 'application/json'
-        }
-      })
-      .then(response => response.json())
-      .then(userEntries => dispatch(postUserEntrySuccess(inputBody.value)))
-      .catch(err => dispatch(postUserEntryError(err.message)))
-    }, 2000)
+    fetch('/api/userentries', {
+      method: 'POST',
+      body: JSON.stringify({test: inputBody.value}),
+      headers: {
+        Accept: 'application/json',
+        'Content-type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(userEntries => dispatch(postUserEntrySuccess(inputBody.value)))
+    .catch(err => dispatch(postUserEntryError(err.message)))
   }
 }
