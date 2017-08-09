@@ -5,7 +5,7 @@ const initialState = {
    emoTier1: 'happy',
    emoTier2: 'accepted',
    emoTier3: '',
-   emoChoices: ['bad', 'sad', 'happy', 'fearful','angry', 'disgusted', 'surprised']
+   emoChoices: Object.keys(emotionRubric)
    //userComment: ''
 }
 
@@ -17,29 +17,30 @@ const initialState = {
 
 
 export const emoReducer = (state = initialState, action) => {
-  let emoTier2Choices = Object.keys(emotionRubric[state.emoTier1])
-  let emoTier3Choices = emotionRubric[state.emoTier1][state.emoTier2]
+  // let emoTier2Choices = Object.keys(emotionRubric[state.emoTier1])
+  // let emoTier3Choices = emotionRubric[state.emoTier1][state.emoTier2]
 
   switch (action.type) {
     case 'GO_DEEPER':
+       let emoTier1= action.emoSelection1
+       let emoTier2Choices = Object.keys(emotionRubric[emoTier1])
       return {
       ...state,
       emoTier1: action.emoSelection1,
       emoChoices: emoTier2Choices
       }
     case 'GO_DEEPER2':
-      let emoTier3Choices= Object.keys(emotionRubric.emoTier2)
+      let emoTier2 = action.selection2
+      let emoTier3Choices= emotionRubric[state.emoTier1][emoTier2]
       return {
       ...state,
       emoTier2: action.emoSelection2,
       emoChoices: emoTier3Choices
-        // display the next level of emotion components
       }
     case 'SELECT_FINAL':
       return {
       ...state,
       emoTier3: action.finalEmotion
-        // display the next level of emotion components
       }
     case 'SUBMIT_ENTRY': {
 // take the users information and POST to server
