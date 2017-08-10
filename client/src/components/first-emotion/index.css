@@ -1,0 +1,14 @@
+fieldset, .userEmotion {
+  border: none;
+}
+
+button, input {
+  padding: 10px 30px;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+.userEmotion {
+  width: 200px;
+}
