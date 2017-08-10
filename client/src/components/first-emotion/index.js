@@ -14,8 +14,9 @@ class FirstEmotion extends React.Component {
   }
   submitEntry(e){
     e.preventDefault();
+    const inputsomething = this.emoInput;
     const inputBody = this.input;
-    this.props.dispatch(postUserEntry(inputBody));
+    this.props.dispatch(postUserEntry(inputBody, inputsomething));
   }
 
   render() {
@@ -25,10 +26,13 @@ class FirstEmotion extends React.Component {
             <p>{this.props.emoTiers[2]}</p>
             <form onSubmit={e => this.submitEntry(e)}>
               <fieldset>
-                <input type="text" name="userEntry" id="userEntry"
-                  className="text" placeholder="Add your Entry" required
+                <input type="text" name="userEmotion" id="userEmotion"
+                  className="text" value={this.props.emoTiers[2]} required
+                  ref={input => this.emoInput = input} />
+                <input type="text" name="userComment" id="userComment"
+                  className="text" placeholder="Add your comment" required
                   ref={input => this.input = input} />
-                   <button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button>
+                <button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button>
               </fieldset>
             </form>
           </div>

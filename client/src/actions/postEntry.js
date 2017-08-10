@@ -15,13 +15,17 @@ const postUserEntryError = (message) => ({
   message
 });
 
-export const postUserEntry = (inputBody) => {
+export const postUserEntry = (inputBody, inputsomething) => {
   const url = 'http://localhost:8080/api/userEntries'
   return (dispatch) => {
     dispatch(postUserEntryRequest())
     fetch(url, {
       method: 'POST',
-      body: JSON.stringify({postEntry: inputBody.value}),
+      body: JSON.stringify({
+        username: 'startledJoe',
+        comment: inputBody.value,
+        emotion: inputsomething.value
+      }),
       headers: {
         Accept: 'application/json',
         'Content-type': 'application/json'

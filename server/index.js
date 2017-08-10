@@ -26,7 +26,7 @@ app.get('/api/userEntries', (req, res) => {
   console.log(req.body)
   UserEntries
     .find()
-    .then(entries => res.json(entries))
+    .then(entries => res.json(entries.apiRepr()))
     .catch(err => {
         console.error(err);
         res.status(500).json({message: 'Internal server error'});
@@ -37,34 +37,26 @@ app.get('/api/userEntries', (req, res) => {
 app.post('/api/userEntries', (req, res) => {
   console.log('req.body is....');
   console.log(req.body);
-  // const userSuppliedTag = req.body.tag;
-  // const validTags = ['funny', 'inspirational', 'pop-culture', 'life', 'relationships'];
-  const requiredFields = ['userName'];
-  let message;
+  // const requiredFields = ['userName'];
+  // let message;
 
-  for (let i = 0; i < requiredFields.length; i++) {
-    const field = requiredFields[i];
-    if (!(field in req.body)) {
-      message = `Missing \`${field}\` in request body`;
-      console.error(message);
-      return res.status(400).send(message);
-    }
-  }
-
-  // check if array includes userSuppliedTag;
-  // respond apppropeiately in both cases
-  // if (!validTags.includes(userSuppliedTag)) {
-  //   message = `'${userSuppliedTag}' is not a valid tag`;
-  //   res.status(400).send(message);
+  // for (let i = 0; i < requiredFields.length; i++) {
+  //   const field = requiredFields[i];
+  //   if (!(field in req.body)) {
+  //     message = `Missing \`${field}\` in request body`;
+  //     console.error(message);
+  //     return res.status(400).send(message);
+  //   }
   // }
 
   UserEntries
     .create({
-      userName: req.body.userName,
+      userName: req.body.username,
       emotion: req.body.emotion,
-      timeOfEvent: req.body.timeOfEvent,
+      comment: req.body.comment,
+      timeOfEvent: req.body.timeOfEvent
     })
-    .then(userEnt => res.status(201).json(userEnt))
+    .then(userEnt => res.status(201).json(userEnt.apiRepr()))
     .catch(err => {
       console.error(err);
       res.status(500).json({ error: 'Something went wrong' });

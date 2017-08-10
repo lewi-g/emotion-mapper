@@ -16,10 +16,20 @@ const userSchema = new mongoose.Schema({
 const userEntriesSchema = new mongoose.Schema({
   userName: {type: String, required: true},
   // password: {type: String, required: true},
-  emotion: {type: String, required: true},
-  event: {type: String},
+  emotion: {type: String/*, required: true*/},
+  comment: {type: String},
   timeOfEvent: {type: Date, default: Date.now }
 });
+
+postSchema.methods.apiRepr = function() {
+  return {
+    id: this.id,
+    userName: this.userName,
+    emotion: this.emotion,
+    comment: this.comment,
+    timeOfEvent: this.timeOfEvent,
+  };
+};
 
 const UserEntries = mongoose.model('UserEntry', userEntriesSchema);
 module.exports.UserEntries = UserEntries;

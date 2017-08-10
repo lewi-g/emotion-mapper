@@ -18,7 +18,6 @@ const optionsFromTiers = (emotionRubric, emoTiers) => {
   let currentChoices;
   emoTiers.forEach(key => {
     currentLevel = currentLevel[key];
-      console.log('CURRENT LEVEL', currentLevel)
   });
   if (currentLevel === true) {
     return null;
@@ -26,7 +25,6 @@ const optionsFromTiers = (emotionRubric, emoTiers) => {
     currentChoices = Object.keys(currentLevel);
     return currentChoices
   }
-  console.log('first one', currentChoices)
 };
 
 export const emoReducer = (state = initialState, action) => {
