@@ -9,10 +9,14 @@ class UserHistory extends React.Component {
     this.props.dispatch(fetchUserEntries())
   }
   render () {
+    const entryList = this.props.userEntries.map((entry, i) => {
+      const {id, emotion, comment }=entry;
+      return <li key={id}>{emotion} </li>
+    })
     return (
       <div>
         <ul>
-          {this.props.userEntries.map(entry => <li>{entry}</li>)}
+          {entryList}
         </ul>
       </div>
     )
