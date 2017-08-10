@@ -23,7 +23,7 @@ app.use(cors())
 // API endpoints go here!
 
 app.get('/api/userEntries', (req, res) => {
-  console.log(req.body)
+  console.log('REQUEST', req.body)
   UserEntries
     .find()
     .then(entries => res.json(entries.apiRepr()))

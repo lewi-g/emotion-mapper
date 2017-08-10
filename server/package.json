@@ -12,12 +12,10 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
-    "express": "^4.15.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
     "mongoose": "^4.11.6",
     "morgan": "^1.8.2",
     "nodemon": "^1.11.0"
-  },
-  "devDependencies": {
-    "dotenv": "^4.0.0"
   }
 }

@@ -5,9 +5,11 @@ import {BrowserRouter as Link} from 'react-router-dom'
 import {goDeeper} from '../../actions'
 import {postUserEntry} from '../../actions/postEntry'
 
+import './index.css'
+
 class FirstEmotion extends React.Component {
   componentDidMount() {
-    console.log(this.props.match.params)
+
   }
   processEmotion(emotion){
     this.props.dispatch(goDeeper(emotion))
@@ -23,11 +25,11 @@ class FirstEmotion extends React.Component {
     if (this.props.emoChoices === null) {
         return (
           <div>
-            <p>{this.props.emoTiers[2]}</p>
+            <p>Today, I am feeling...</p>
             <form onSubmit={e => this.submitEntry(e)}>
               <fieldset>
                 <input type="text" name="userEmotion" id="userEmotion"
-                  className="text" value={this.props.emoTiers[2]} required
+                  className="userEmotion" value={this.props.emoTiers[2]} required
                   ref={input => this.emoInput = input} />
                 <input type="text" name="userComment" id="userComment"
                   className="text" placeholder="Add your comment" required
@@ -44,7 +46,7 @@ class FirstEmotion extends React.Component {
             <form onSubmit={e => e.preventDefault()}>
               <fieldset>
                 {this.props.emoChoices.map((emotion, index) =>
-                  <button onClick={e => this.processEmotion(emotion)} type="submit" key={index}>{emotion}</button>
+                  <button onClick={e => this.processEmotion(emotion)} type="submit" key={index}>{emotion.toUpperCase()}</button>
                 )}
               </fieldset>
             </form>

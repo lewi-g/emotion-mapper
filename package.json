@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm run build",
-      "dev": "npm run dev:server && npm run dev:client",
+    "dev": "run-p dev:server dev:client start",
     "dev:client": "cd client && cross-env BROWSER=none npm start -- --color=always | xp http://localhost:3000/ http://localhost:8080/",
     "dev:server": "cd server && npm start",
     "install": "run-s install:server install:client",
@@ -21,19 +21,10 @@
   "author": "Joe Turner <jturner@thinkful.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "babel-preset-react-app": "^3.0.1",
     "cross-env": "^3.1.4",
-    "express": "^4.15.4",
+    "express": "^4.14.1",
     "http-proxy-middleware": "^0.17.3",
     "npm-run-all": "^4.0.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.5",
-    "react-script": "^2.0.5",
-    "react-scripts": "^1.0.10",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
     "xp": "^1.0.1"
   }
 }

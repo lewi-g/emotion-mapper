@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 import FirstEmotion from '../first-emotion'
 import SubmitPage from '../submit-page'
 
+import './index.css'
+
 
 class EmotionParent extends React.Component {
   render() {

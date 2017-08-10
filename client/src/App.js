@@ -6,6 +6,8 @@ import EmotionParent from './components/emotion-parent'
 import UserHistory from './components/user-history'
 {/*import UserLogin from './components/user-login'*/}
 
+import './App.css'
+
 
 class App extends React.Component {
   render() {
@@ -16,11 +18,13 @@ class App extends React.Component {
             <h1>Man Up!</h1>
             <h2><Link to="/user-history">See My History</Link></h2>
           </header>
-            <main>
+          <main>
+            <div className="main-div">
               {/*<Route exact path="/login" component={UserLogin} />*/}
               <Route path="/emotions" component={EmotionParent} />
               <Route exact path="/user-history" component={UserHistory} />
-            </main>
+            </div>
+          </main>
         </div>
       </Router>
     );
