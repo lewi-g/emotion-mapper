@@ -27,6 +27,9 @@ export const fetchUserEntries = () => dispatch =>{
     }
     return res.json();
   })
-  .then(userEntries => dispatch(fetchUserEntriesSuccess(userEntries)))
+  .then(userEntries => {
+    dispatch(fetchUserEntriesSuccess(userEntries))
+    console.log(userEntries)
+  })
   .catch(error => dispatch(fetchUserEntriesError(error.message)))
 };

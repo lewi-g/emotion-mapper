@@ -21,7 +21,7 @@ const userEntriesSchema = new mongoose.Schema({
   timeOfEvent: {type: Date, default: Date.now }
 });
 
-postSchema.methods.apiRepr = function() {
+userEntriesSchema.methods.apiRepr = function() {
   return {
     id: this.id,
     userName: this.userName,
