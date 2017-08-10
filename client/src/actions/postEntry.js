@@ -16,7 +16,7 @@ const postUserEntryError = (message) => ({
 });
 
 export const postUserEntry = (inputBody, inputsomething) => {
-  const url = 'http://localhost:8081/api/userEntries'
+  const url = 'http://localhost:8080/api/userEntries'
   return (dispatch) => {
     dispatch(postUserEntryRequest())
     fetch(url, {
