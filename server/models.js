@@ -23,7 +23,7 @@ const userEntriesSchema = new mongoose.Schema({
 
 userEntriesSchema.methods.apiRepr = function() {
   return {
-    id: this.id,
+    id: this._id,
     userName: this.userName,
     emotion: this.emotion,
     comment: this.comment,
