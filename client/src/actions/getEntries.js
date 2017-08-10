@@ -18,8 +18,8 @@ export const fetchUserEntriesError = message => ({
 export const fetchUserEntries = () => dispatch =>{
   console.log('UserEntries being fetched');
     dispatch(fetchUserEntriesRequest());
-  fetch('/api/userEntries', {
-    method: 'GET'
+  fetch('http://localhost:8080/api/userEntries', {
+    method: 'GET',
   })
   .then(res => {
     if (!res.ok) {
