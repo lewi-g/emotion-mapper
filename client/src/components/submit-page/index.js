@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 class SubmitPage extends React.Component {
   render() {
     return (
-      <p>Submit sturf</p>
+      <p>Submitted!</p>
     )
   }
 }

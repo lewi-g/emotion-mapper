@@ -34,7 +34,7 @@ class FirstEmotion extends React.Component {
                 <input type="text" name="userComment" id="userComment"
                   className="text" placeholder="Add your comment" required
                   ref={input => this.input = input} />
-                <button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button>
+                <Link to="/submitted"><button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button></Link>
               </fieldset>
             </form>
           </div>
