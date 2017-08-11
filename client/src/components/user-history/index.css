@@ -3,25 +3,28 @@
   flex-direction: column;
   align-items: center;
   font-size: 1.2rem;
-  border: thin solid black;
+  /*border: thin solid black;*/
   width: 80%;
 }
 
 .entry {
   display: flex;
-  width: 100%;
-  border: thin solid black;
-  justify-content: space-between;
+  width: 80%;
+  /*border: thin solid black;*/
+  justify-content: space-around;
+  border-right: thin solid black;
+  border-left: thin solid black;
 
 
 }
 
 .data {
   /*width: 33%;*/
-  border: thin solid black;
+  border-top: thin solid black;
+  border-bottom: thin solid black;
 }
 
-.emotion-div {
+.emotion-div, .time-div {
   width: 25%;
 }
 
@@ -30,9 +33,6 @@
   width: 50%;
 }
 
-.time-div {
-  width: 25%;
-}
 
 div > p {
   /*border: thin solid black;*/

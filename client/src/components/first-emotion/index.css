@@ -2,13 +2,32 @@ fieldset, .userEmotion {
   border: none;
 }
 
-button, input {
+button, input, h3 {
   padding: 10px 30px;
-  margin: 0 10px;
+  margin: 10px;
   font-size: 1.2rem;
   font-family: sans-serif;
 }
 
 .userEmotion {
-  width: 75px;
+  width: 200px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: flex-start;
+  padding-left: 800px;
+}
+
+.text {
+  width: 80%;
 }

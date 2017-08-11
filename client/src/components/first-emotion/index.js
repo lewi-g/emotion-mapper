@@ -24,16 +24,16 @@ class FirstEmotion extends React.Component {
   render() {
     if (this.props.emoChoices === null) {
         return (
-          <div>
+          <div className="container">
             {this.props.showForm ?
-              <form onSubmit={e => this.submitEntry(e)}>
-                <h3>Today, I am feeling...</h3>
+              <form className="form" onSubmit={e => this.submitEntry(e)}>
+                <h3>Today, I am feeling... {this.props.emoTiers[2]}</h3>
                 <fieldset>
                   <input type="text" name="userEmotion" id="userEmotion"
-                    className="userEmotion" value={this.props.emoTiers[2]} required
+                    className="userEmotion" hidden value={this.props.emoTiers[2]} required
                     ref={input => this.emoInput = input} />
                   <input type="text" name="userComment" id="userComment"
-                    className="text" placeholder="Add your comment" required
+                    className="text" placeholder="Why are you feeling this way?" required
                     ref={input => this.input = input} />
                   <button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button>
                 </fieldset>
