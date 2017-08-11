@@ -6,7 +6,8 @@ POST_USER_ENTRY_ERROR} from '../actions/postEntry'
 const initialState = {
   userEntries: [],
   loading: false,
-  error: null
+  error: null,
+  showForm: true
 }
 
 const postEntry = (state = initialState, action) => {
@@ -20,7 +21,8 @@ const postEntry = (state = initialState, action) => {
     return ({
       userEntries: [...state.userEntries, action.userEntry],
       loading: false,
-      error: null
+      error: null,
+      showForm: false
     })
   }
   else if (action.type === POST_USER_ENTRY_ERROR) {

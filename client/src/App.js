@@ -16,7 +16,7 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <header>
-            <h1>Man Up!</h1>
+            <h1><Link to="/emotions">Man Up!</Link></h1>
             <h2><Link to="/user-history">See My History</Link></h2>
           </header>
           <main>

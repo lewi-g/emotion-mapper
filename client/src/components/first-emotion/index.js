@@ -25,24 +25,27 @@ class FirstEmotion extends React.Component {
     if (this.props.emoChoices === null) {
         return (
           <div>
-            <p>Today, I am feeling...</p>
-            <form onSubmit={e => this.submitEntry(e)}>
-              <fieldset>
-                <input type="text" name="userEmotion" id="userEmotion"
-                  className="userEmotion" value={this.props.emoTiers[2]} required
-                  ref={input => this.emoInput = input} />
-                <input type="text" name="userComment" id="userComment"
-                  className="text" placeholder="Add your comment" required
-                  ref={input => this.input = input} />
-                <Link to="/submitted"><button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button></Link>
-              </fieldset>
-            </form>
+            {this.props.showForm ?
+              <form onSubmit={e => this.submitEntry(e)}>
+                <h3>Today, I am feeling...</h3>
+                <fieldset>
+                  <input type="text" name="userEmotion" id="userEmotion"
+                    className="userEmotion" value={this.props.emoTiers[2]} required
+                    ref={input => this.emoInput = input} />
+                  <input type="text" name="userComment" id="userComment"
+                    className="text" placeholder="Add your comment" required
+                    ref={input => this.input = input} />
+                  <button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button>
+                </fieldset>
+              </form>
+              : <h1>You have submitted your entry!</h1>
+            }
           </div>
         )
       } else {
         return (
           <div className="first-emotion">
-
+            <h1>How are you feeling?</h1>
             <form onSubmit={e => e.preventDefault()}>
               <fieldset>
                 {this.props.emoChoices.map((emotion, index) =>
@@ -57,6 +60,7 @@ class FirstEmotion extends React.Component {
 }
 const mapStateToProps = (state) => ({
     emoTiers: state.emoReducer.emoTiers,
-    emoChoices: state.emoReducer.emoChoices
+    emoChoices: state.emoReducer.emoChoices,
+    showForm: state.postEntry.showForm
 });
 export default connect(mapStateToProps)(FirstEmotion)
