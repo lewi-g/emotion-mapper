@@ -4,6 +4,7 @@ export const goDeeper = emoSelection => ({
   emoSelection
 })
 
+
 export const SUBMIT_ENTRY = 'SUBMIT_ENTRY';
 export const submitEntry = userEntry => ({
   type: SUBMIT_ENTRY,
