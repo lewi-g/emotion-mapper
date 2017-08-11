@@ -8,9 +8,7 @@ import {postUserEntry} from '../../actions/postEntry'
 import './index.css'
 
 class FirstEmotion extends React.Component {
-  componentDidMount() {
 
-  }
   processEmotion(emotion){
     this.props.dispatch(goDeeper(emotion))
   }

@@ -7,7 +7,7 @@ import FirstEmotion from '../first-emotion'
 import './index.css'
 
 
-class EmotionParent extends React.Component {
+export default class EmotionParent extends React.Component {
   render() {
     return (
       <div className="emotion-parent">
@@ -17,4 +17,4 @@ class EmotionParent extends React.Component {
   }
 }
 
-export default connect()(EmotionParent)
+

@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "A full-stack starter template",
   "main": "index.js",
-  "engines":{
-    "node":"8.3.0"
+  "engines": {
+    "node": "8.3.0"
   },
   "scripts": {
     "start": "node index.js",

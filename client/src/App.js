@@ -7,10 +7,7 @@ import EmotionParent from './components/emotion-parent'
 import UserHistory from './components/user-history'
 {/*import UserLogin from './components/user-login'*/}
 
-
-
-
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <Router>
@@ -32,4 +29,4 @@ class App extends React.Component {
   }
 }
 
-export default connect()(App)
+
