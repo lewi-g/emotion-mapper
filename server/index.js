@@ -70,7 +70,7 @@ app.get(/^(?!\/api(\/|$))/, (req, res) => {
 let server;
 function runServer(databaseUrl = DATABASE_URL, port = 3001) {
   return new Promise((resolve, reject) => {
-    mongoose.connect(databaseUrl, err => {
+    mongoose.connect('mongodb://dev:devdev@ds161021.mlab.com:61021/emotions-man-up', err => {
       if (err) {
         return reject(err);
       }
