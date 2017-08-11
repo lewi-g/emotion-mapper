@@ -13,12 +13,13 @@ class UserHistory extends React.Component {
   render () {
     const entryList = this.props.userEntries.map((entry, i) => {
       const {id, emotion, comment, timeOfEvent }=entry;
-      return <p key={id}>
-        ------------------------------------------------------------- <br />
-        Emotion: {emotion} <br />
-        Comment: {comment} <br />
-        Time of Event: {timeOfEvent}
-      </p>
+      return (
+      <div className="row entry">
+        <div className="emotion-div"><p>Emotion: {emotion}</p></div>
+        <div className="comment-div"><p>Comment: {comment}</p></div>
+        <div className="time-div"><p>Time of Event: {timeOfEvent}</p></div>
+      </div>
+      )
     })
     return (
       <div className="container">

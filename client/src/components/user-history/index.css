@@ -4,3 +4,18 @@
   justify-content: center;
   font-size: 1.2rem;
 }
+
+.entry {
+  display: flex;
+}
+
+div > p {
+  border: thin solid black;
+}
+
+
+/*<div className="row entry" key={id}>
+  <div className="emotion-div"><p>Emotion: {emotion}</p></div>
+  <div className="comment-div"><p>Comment: {comment}</p></div>
+  <div className="time-div"><p>Time of Event: {timeOfEvent}</p></div>
+</div>*/
