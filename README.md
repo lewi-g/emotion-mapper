@@ -1,6 +1,25 @@
 # "Man"-up Emotion-mapper
 
 An app to help users track and educate themselves about their emotions.
+A deployed version of the app can be found here: https://emotion-mapper.herokuapp.com/emotions
+
+## User Stories
+A user will be able to create an entry that reflects their emotional state.
+
+A user will able to add a comment to the emotion entry.
+
+A user will be be able to see their entries in a chronological fashion and see trends.
+
+A user will be able to see all the events associated with a particular emotion.
+
+## Technology Used
+
+- React
+- Redux
+- Node
+- Express
+- Mongo
+- Mongoose
 
 ## User Stories
 A user will be able to create an entry that reflects their emotional state.
@@ -14,40 +33,19 @@ A user will be able to see all the events associated with a particular emotion.
 
 ## Future Capabilities
 
+- filtering by emotion, event or time stamp
+- User authentication, privacy
+- Show filtered data using imagery, colors etc..
+- graphical representation, visual representation, charts, color graphs, pies, etc…
+- Feedback regarding emotion: remember this awesome moment! 
+- Feedback: if negative - do the things that brought you joy
 
+## App Purpose
 
-## Proxying
-
-In development, the full stack template works by proxying requests from port 8080 to the server or the client.  Any requests to routes which start with `/api/`, (for example, `/api/foo`, or `/api/foo/bar`) will be sent to the server.  All other requests, will serve the client.
-
-*tl;dr* Make sure your API endpoints start with `/api`.
-
-## Installing dependencies
-
-Client-side dependencies should be installed into the `client` directory:
-
-```
-cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME/client
-npm install --save dependency-name
-```
-
-Server-side dependencies should be installed into the `server` directory:
-
-```
-cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME/server
-npm install --save dependency-name
-```
-
-## Deployment
-
-Requires the [Heroku CLI client](https://devcenter.heroku.com/articles/heroku-command-line).
-
-### Setting up the project on Heroku
-
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Create the Heroku app: `heroku create PROJECT_NAME`
-
-### Deploying to Heroku
-
-* Push your code to Heroku: `git push heroku master`
-
+- I want to build an app that helps a person track what their emotions are using this chart below. A user will start from the center of the circle and go out to the edges. 
+- Help a person be aware of the nuances of their emotions. (not growing up with awareness etc….)
+- Help a person see trends in their lives. 
+- If a person sees a trend where they’re unhappy in a particular situation often, they can choose to avoid situation in the future
+- If a person feels awesome. Empowered etc… in  a situation, they can choose to pursue those activities more. 
+- Build awareness and help in decision making. 
+- Most apps like this cost money. 
