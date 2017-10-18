@@ -11,7 +11,6 @@ class FirstEmotion extends React.Component {
   processEmotion(emotion){
     this.props.dispatch(goDeeper(emotion))
   }
-
   submitEntry(e){
     e.preventDefault();
     const inputsomething = this.emoInput;
