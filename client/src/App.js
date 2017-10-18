@@ -1,11 +1,9 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import {connect} from 'react-redux'
 
 import './App.css'
 import EmotionParent from './components/emotion-parent'
 import UserHistory from './components/user-history'
-{/*import UserLogin from './components/user-login'*/}
 
 export default class App extends React.Component {
   render() {
@@ -18,7 +16,6 @@ export default class App extends React.Component {
           </header>
           <main>
             <div className="main-div">
-              {/*<Route exact path="/login" component={UserLogin} />*/}
               <Route path="/emotions" component={EmotionParent} />
               <Route exact path="/user-history" component={UserHistory} />
             </div>
