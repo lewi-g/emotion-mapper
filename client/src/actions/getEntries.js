@@ -18,7 +18,7 @@ export const fetchUserEntriesError = message => ({
 export const fetchUserEntries = () => dispatch =>{
   console.log('UserEntries being fetched');
     dispatch(fetchUserEntriesRequest());
-  fetch('http://localhost:8080/api/userEntries', {
+  fetch('/api/userEntries', {
     method: 'GET',
   })
   .then(res => {
