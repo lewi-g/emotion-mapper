@@ -12,18 +12,18 @@ const initialState = {
 
 const userEntries = (state = initialState, action) => {
   switch (action.type) {
-    case "FETCH_USER_ENTRIES_ERROR":
+    case FETCH_USER_ENTRIES_ERROR:
       return {
         ...state,
         error: action.error,
         loading: false
       };
-    case "FETCH_USER_ENTRIES_REQUEST":
+    case FETCH_USER_ENTRIES_REQUEST:
       return {
         ...state,
         loading: true
       };
-    case "FETCH_USER_ENTRIES_SUCCESS":
+    case FETCH_USER_ENTRIES_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -32,7 +32,7 @@ const userEntries = (state = initialState, action) => {
       };
     default:
       return state;
-  }
+  };
 };
 
 export default userEntries;

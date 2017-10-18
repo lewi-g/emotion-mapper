@@ -1,5 +1,5 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 class UserLogin extends React.Component {
 
@@ -7,10 +7,9 @@ class UserLogin extends React.Component {
     event.preventDefault()
     const userName = this.input
     const passWord = this.passwordInput
-    // dispatch to action
   }
 
-  render () {
+  render() {
     return (
       <div className="user-login">
         <form onSubmit={e => this.submitUser(e)}>
@@ -23,7 +22,7 @@ class UserLogin extends React.Component {
             <input type="text" name="password" id="password"
               className="password-input" required
               ref={passwordInput => this.input = passwordInput} />
-               <button type="submit" id="user-submit-button" className="button" name="submit">Submit</button>
+            <button type="submit" id="user-submit-button" className="button" name="submit">Submit</button>
           </fieldset>
         </form>
       </div>
