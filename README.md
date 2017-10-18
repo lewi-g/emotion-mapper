@@ -22,6 +22,7 @@ A user will be able to see all the events associated with a particular emotion.
 - Mongoose
 
 ## User Stories
+
 A user will be able to create an entry that reflects their emotional state.
 
 A user will able to add a comment to the emotion entry.
@@ -33,10 +34,10 @@ A user will be able to see all the events associated with a particular emotion.
 
 ## Future Capabilities
 
-- filtering by emotion, event or time stamp
+- Filtering by emotion, event or time stamp
 - User authentication, privacy
 - Show filtered data using imagery, colors etc..
-- graphical representation, visual representation, charts, color graphs, pies, etc…
+- Graphical representation, visual representation, charts, color graphs, pies, etc…
 - Feedback regarding emotion: remember this awesome moment! 
 - Feedback: if negative - do the things that brought you joy
 
