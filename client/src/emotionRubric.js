@@ -25,7 +25,7 @@ export const emotionRubric = {
   },
   disgusted: {
     dissaproving: { judgemental: true, embarassed: true },
-    disapointed: { appalled: true, revolted: true },
+    disappointed: { appalled: true, revolted: true },
     awful: { nauseated: true, detestable: true },
     repelled: { horrified: true, hesitant: true }
   },
