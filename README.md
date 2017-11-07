@@ -8,7 +8,7 @@ A user will be able to create an entry that reflects their emotional state.
 
 A user will able to add a comment to the emotion entry.
 
-A user will be be able to see their entries in a chronological fashion and see trends.
+A user will be able to see their entries in a chronological fashion and see trends.
 
 A user will be able to see all the events associated with a particular emotion.
 
@@ -20,17 +20,6 @@ A user will be able to see all the events associated with a particular emotion.
 - Express
 - Mongo
 - Mongoose
-
-## User Stories
-
-A user will be able to create an entry that reflects their emotional state.
-
-A user will able to add a comment to the emotion entry.
-
-A user will be be able to see their entries in a chronological fashion and see trends.
-
-A user will be able to see all the events associated with a particular emotion.
-
 
 ## Future Capabilities
 
