@@ -2,23 +2,23 @@ export const FETCH_USER_ENTRIES_SUCCESS = 'FETCH_USER_ENTRIES_SUCCESS';
 export const fetchUserEntriesSuccess = userEntries => ({
   type: FETCH_USER_ENTRIES_SUCCESS,
   userEntries
-})
+});
 
 export const FETCH_USER_ENTRIES_REQUEST = 'FETCH_USER_ENTRIES_REQUEST';
 export const fetchUserEntriesRequest = () => ({
   type: FETCH_USER_ENTRIES_REQUEST
-})
+});
 
 export const FETCH_USER_ENTRIES_ERROR = 'FETCH_USER_ENTRIES_ERROR';
 export const fetchUserEntriesError = message => ({
   type: FETCH_USER_ENTRIES_ERROR,
   message
-})
+});
 
 export const fetchUserEntries = () => dispatch =>{
   console.log('UserEntries being fetched');
     dispatch(fetchUserEntriesRequest());
-  fetch('http://localhost:8080/api/userEntries', {
+  fetch('/api/userEntries', {
     method: 'GET',
   })
   .then(res => {
@@ -27,7 +27,6 @@ export const fetchUserEntries = () => dispatch =>{
     }
     return res.json();
   })
-  // .then(console.log(res))
   .then(userEntries => {
     dispatch(fetchUserEntriesSuccess(userEntries))
     console.log(userEntries)

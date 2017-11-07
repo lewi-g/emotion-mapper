@@ -3,7 +3,7 @@ export const emotionRubric = {
     bored: { indifferent: true, apathetic: true },
     busy: { pressured: true, apathetic: true },
     stressed: { overwhelmed: true, "out of control": true },
-    tired: { sleepy: true, unfocussed: true }
+    tired: { sleepy: true, unfocused: true }
   },
   fearful: {
     scared: { helpless: true, frightened: true },
@@ -25,12 +25,12 @@ export const emotionRubric = {
   },
   disgusted: {
     dissaproving: { judgemental: true, embarassed: true },
-    disapointed: { appalled: true, revolted: true },
+    disappointed: { appalled: true, revolted: true },
     awful: { nauseated: true, detestable: true },
     repelled: { horrified: true, hesitant: true }
   },
   sad: {
-    hurt: { embarassed: true, diappointed: true },
+    hurt: { embarassed: true, disappointed: true },
     guilty: { ashamed: true, remorseful: true },
     despair: { grief: true, powerless: true },
     vulnerable: { victimized: true, fragile: true },
@@ -45,7 +45,7 @@ export const emotionRubric = {
     powerful: { courageous: true, creative: true },
     peaceful: { loving: true, thankful: true },
     trusting: { sensitive: true, intimate: true },
-    optimistic: { hopful: true, inspired: true }
+    optimistic: { hopeful: true, inspired: true }
   },
   surprised: {
     startled: { shocked: true, dismayed: true },

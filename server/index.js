@@ -10,7 +10,6 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 const { UserEntries } = require('./models');
-
 const { DATABASE_URL, PORT } = require('./config');
 
 app.use(morgan('common'));
@@ -30,31 +29,17 @@ app.get('/api/userEntries', (req, res) => {
 });
 
 app.post('/api/userEntries', (req, res) => {
-  console.log('req.body is....');
-  console.log(req.body);
-  // const requiredFields = ['userName'];
-  // let message;
-
-  // for (let i = 0; i < requiredFields.length; i++) {
-  //   const field = requiredFields[i];
-  //   if (!(field in req.body)) {
-  //     message = `Missing \`${field}\` in request body`;
-  //     console.error(message);
-  //     return res.status(400).send(message);
-  //   }
-  // }
-
   UserEntries.create({
     userName: req.body.username,
     emotion: req.body.emotion,
     comment: req.body.comment,
     timeOfEvent: req.body.timeOfEvent
   })
-    .then(userEnt => res.status(201).json(userEnt.apiRepr()))
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({ error: 'Something went wrong' });
-    });
+  .then(userEnt => res.status(201).json(userEnt.apiRepr()))
+  .catch(err => {
+    console.error(err);
+    res.status(500).json({ error: 'Something went wrong' });
+  });
 });
 
 // Serve the built client
@@ -85,10 +70,8 @@ function runServer(databaseUrl = DATABASE_URL, port = 3001) {
         });
     });
   });
-}
+};
 
-// this function closes the server, and returns a promise. we'll
-// use it in our integration tests later.
 function closeServer() {
   return mongoose.disconnect().then(() => {
     return new Promise((resolve, reject) => {
@@ -101,11 +84,11 @@ function closeServer() {
       });
     });
   });
-}
+};
 
 if (require.main === module) {
   runServer();
-}
+};
 
 module.exports = {
   app,

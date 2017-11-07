@@ -1,11 +1,9 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import {connect} from 'react-redux'
 
 import './App.css'
-import EmotionParent from './components/emotion-parent'
+import FirstEmotion from './components/first-emotion'
 import UserHistory from './components/user-history'
-{/*import UserLogin from './components/user-login'*/}
 
 export default class App extends React.Component {
   render() {
@@ -13,13 +11,13 @@ export default class App extends React.Component {
       <Router>
         <div className="App">
           <header>
-            <h1><Link to="/emotions">Man Up!</Link></h1>
-            <h2><Link to="/user-history">See My History</Link></h2>
+            <h1><Link to="/">Dig Deep</Link></h1>
           </header>
           <main>
             <div className="main-div">
-              {/*<Route exact path="/login" component={UserLogin} />*/}
-              <Route path="/emotions" component={EmotionParent} />
+              <h2><Link to="/emotions">Start New Entry</Link></h2>
+              <h2><Link to="/user-history">See My History</Link></h2>
+              <Route path="/emotions" component={FirstEmotion} />
               <Route exact path="/user-history" component={UserHistory} />
             </div>
           </main>
