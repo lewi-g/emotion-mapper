@@ -45,7 +45,7 @@ export const emotionRubric = {
     powerful: { courageous: true, creative: true },
     peaceful: { loving: true, thankful: true },
     trusting: { sensitive: true, intimate: true },
-    optimistic: { hopful: true, inspired: true }
+    optimistic: { hopeful: true, inspired: true }
   },
   surprised: {
     startled: { shocked: true, dismayed: true },
