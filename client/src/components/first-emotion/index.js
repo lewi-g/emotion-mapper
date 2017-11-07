@@ -46,7 +46,12 @@ class FirstEmotion extends React.Component {
             <form onSubmit={e => e.preventDefault()}>
               <fieldset>
                 {this.props.emoChoices.map((emotion, index) =>
-                  <button onClick={e => this.processEmotion(emotion)} type="submit" key={index}>{emotion.toUpperCase()}</button>
+                  <button 
+                    onClick={e => this.processEmotion(emotion)} 
+                    type="submit" 
+                    key={index}>
+                      {emotion.toUpperCase()}
+                  </button>
                 )}
               </fieldset>
             </form>
