@@ -30,7 +30,7 @@ export const emotionRubric = {
     repelled: { horrified: true, hesitant: true }
   },
   sad: {
-    hurt: { embarassed: true, diappointed: true },
+    hurt: { embarassed: true, disappointed: true },
     guilty: { ashamed: true, remorseful: true },
     despair: { grief: true, powerless: true },
     vulnerable: { victimized: true, fragile: true },
