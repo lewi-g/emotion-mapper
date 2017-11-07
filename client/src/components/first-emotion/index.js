@@ -26,13 +26,30 @@ class FirstEmotion extends React.Component {
               <form className="form" onSubmit={e => this.submitEntry(e)}>
                 <h3>Today, I am feeling... {this.props.emoTiers[2]}</h3>
                 <fieldset>
-                  <input type="text" name="userEmotion" id="userEmotion"
-                    className="userEmotion" hidden value={this.props.emoTiers[2]} required
+                  <input 
+                    type="text" 
+                    name="userEmotion" 
+                    id="userEmotion"
+                    className="userEmotion" 
+                    hidden 
+                    value={this.props.emoTiers[2]} 
+                    required
                     ref={input => this.emoInput = input} />
-                  <input type="text" name="userComment" id="userComment"
-                    className="text" placeholder="Why are you feeling this way?" required
+                  <input 
+                    type="text" 
+                    name="userComment" 
+                    id="userComment"
+                    className="text" 
+                    placeholder="Why are you feeling this way?" 
+                    required
                     ref={input => this.input = input} />
-                  <button type="submit" id="entryButton" className="button" name="submit">Submit Entry</button>
+                  <button 
+                    type="submit" 
+                    id="entryButton" 
+                    className="button" 
+                    name="submit">
+                      Submit Entry
+                  </button>
                 </fieldset>
               </form>
               : <h1>You have submitted your entry!</h1>
