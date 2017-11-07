@@ -32,7 +32,7 @@ const postEntry = (state = initialState, action) => {
         error: action.message
       });
     default:
-      return state;
+      return state
   };
 };
 

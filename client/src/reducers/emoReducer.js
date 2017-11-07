@@ -1,4 +1,3 @@
-import { GO_DEEPER1, G0_DEEPER2, FINAL_SELECTION, SUBMIT_ENTRY } from '../actions';
 import { emotionRubric } from '../emotionRubric.js';
 
 const initialState = {
@@ -14,7 +13,8 @@ const optionsFromTiers = (emotionRubric, emoTiers) => {
   });
   if (currentLevel === true) {
     return null;
-  } else {
+  } 
+  if (currentLevel !== true) {
     currentChoices = Object.keys(currentLevel);
     return currentChoices
   };
@@ -34,9 +34,6 @@ export const emoReducer = (state = initialState, action) => {
         ...state,
         emoTier3: action.finalEmotion
       };
-    case 'SUBMIT_ENTRY': {
-      // take the users information and POST to server
-    };
     default: return state
   };
 };
