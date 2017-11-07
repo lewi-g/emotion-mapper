@@ -3,7 +3,7 @@ export const emotionRubric = {
     bored: { indifferent: true, apathetic: true },
     busy: { pressured: true, apathetic: true },
     stressed: { overwhelmed: true, "out of control": true },
-    tired: { sleepy: true, unfocussed: true }
+    tired: { sleepy: true, unfocused: true }
   },
   fearful: {
     scared: { helpless: true, frightened: true },
