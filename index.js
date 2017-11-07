@@ -1,3 +1,4 @@
+
 const express = require('express');
 const proxy = require('http-proxy-middleware');
 
@@ -12,8 +13,7 @@ if (process.env.NODE_ENV === 'production') {
     const runServer = require('./server').runServer;
     // Just run the server
     runServer(DATABASE_URL, process.env.PORT || 8080);
-};
-else {
+    }   else {
     const app = express();
     // Proxy everything through to Create React App
     app.use(proxy('http://localhost:3000/', {
@@ -23,6 +23,6 @@ else {
             // Anything to /api goes to our backend
             'localhost:8080/api': 'http://localhost:3001'
         }
-    }));
-    app.listen(process.env.PORT || 8080);
-};
+  }));
+  app.listen(process.env.PORT || 8080);
+}
