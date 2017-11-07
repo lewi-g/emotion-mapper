@@ -6,7 +6,7 @@ import {fetchUserEntries} from '../../actions/getEntries'
 import './index.css'
 
 class UserHistory extends React.Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.dispatch(fetchUserEntries())
   }
   render () {
@@ -14,9 +14,9 @@ class UserHistory extends React.Component {
       const { emotion, comment, timeOfEvent } = entry;
       return (
       <div className="entry">
-        <div className="data emotion-div"><p><strong>Emotion:</strong> {emotion}</p></div>
-        <div className="data comment-div"><p><strong>Comment:</strong> {comment}</p></div>
-        <div className="data time-div"><p><strong>Time of Event:</strong> {timeOfEvent}</p></div>
+        <div className="data emotion-div"><p><strong>Emotion: </strong>{emotion.charAt(0).toUpperCase() + emotion.slice(1)}</p></div>
+        <div className="data comment-div"><p><strong>Comment: </strong>{comment}</p></div>
+        <div className="data time-div"><p><strong>Time of Event: </strong>{timeOfEvent}</p></div>
       </div>
       );
     })
