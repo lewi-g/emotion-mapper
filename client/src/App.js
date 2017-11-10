@@ -3,7 +3,9 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 import './App.css'
 import FirstEmotion from './components/first-emotion'
+import LandingPage from './components/landing-page'
 import UserHistory from './components/user-history'
+
 
 export default class App extends React.Component {
   render() {
@@ -15,6 +17,7 @@ export default class App extends React.Component {
           </header>
           <main>
             <div className="main-div">
+              <Route exact path="/" component={LandingPage} />
               <h2><Link to="/emotions">Start New Entry</Link></h2>
               <h2><Link to="/user-history">See My History</Link></h2>
               <Route path="/emotions" component={FirstEmotion} />
