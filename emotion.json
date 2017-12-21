@@ -19,7 +19,7 @@
     "bitter": ["indignant", "violated"],
     "mad": ["furious", "jealous"],
     "aggressive": ["provoked", "hostile"],
-    "frustrated": ["infuriurated","annoyed"],
+    "frustrated": ["infuriated","annoyed"],
     "distant": ["withdrawn", "numb"],
     "critical": ["sceptical", "dismissive"]
   },
@@ -45,7 +45,7 @@
     "powerful": ["courageous", "creative"],
     "peaceful": ["loving", "thankful"],
     "trusting": ["sensitive", "intimate"],
-    "optimistic": ["hopful", "inspired"]
+    "optimistic": ["hopeful", "inspired"]
   },
   "surprised":{
     "startled": ["shocked", "dismayed"],
