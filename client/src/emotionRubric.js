@@ -19,7 +19,7 @@ export const emotionRubric = {
     bitter: { indignant: true, violated: true },
     mad: { furious: true, jealous: true },
     aggressive: { provoked: true, hostile: true },
-    frustrated: { infuriurated: true, annoyed: true },
+    frustrated: { infuriated: true, annoyed: true },
     distant: { withdrawn: true, numb: true },
     critical: { sceptical: true, dismissive: true }
   },
